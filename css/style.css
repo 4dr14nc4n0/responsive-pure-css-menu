@@ -29,12 +29,28 @@ ul{
 
 /* Header */
 .header{
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--grey);
+    /* background-color: var(--black); */
+    background-color: transparent;
+    /* box-shadow: 1px 1px 5px 0px var(--grey); */
     position: sticky;
     top: 0;
     width: 100%;
+    object-fit: cover;
+
 }
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: sepia(6);
+  }
 
 /* Logo */
 .logo{
@@ -43,6 +59,10 @@ ul{
     font-size: 60px;
     margin-left: 10px;
 
+}
+
+#main-logo {
+    margin: 1em;
 }
 
 /* Nav menu */
@@ -59,6 +79,7 @@ ul{
     display: block;
     padding: 30px;
     color: var(--white);
+    mix-blend-mode: difference;
 
 }
 
@@ -133,8 +154,27 @@ ul{
     transform: rotate(45deg);
     top:0;
 }
+ 
+#canvas {
+    /* filter: blur(80px); */
+    height: 120%;
+    width: 120%;
+    margin-left: -10%;
+}
 
+#title {
+    text-align: center;
+    color: white;
+    font-size: 20vw;
+    font-weight: bolder;
+    mix-blend-mode: overlay;
+}
 
+[class*="col"] {
+    background-color: #088b81;
+    color: aliceblue;
+    border: 2px solid white;
+}
 /* Responsiveness */
 
 @media (min-width: 768px) {
